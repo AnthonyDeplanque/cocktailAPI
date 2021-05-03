@@ -1,0 +1,12 @@
+.DrinkThumb{
+    width:50px;
+    border-radius:25px;
+}
+.flex{
+    display : flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.box{
+    min-width : 300px;
+}
