@@ -1,8 +1,12 @@
 .cardDrink{
 height : 600px;
-width : 800 px;
+width : 800px;
+border-radius : 5px;
+padding :15px;
 }
 .drinkImg{
-    height : 300px;
+    height : 250px;
+    width: auto;
     border-radius : 50%;
+    box-shadow : 5px 5px 5px rgba(0,0,0,0.4);
 }
