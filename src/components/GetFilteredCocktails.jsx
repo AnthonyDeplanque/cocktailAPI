@@ -8,7 +8,7 @@ const API_CATEGORIES = "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=l
 
 const GetFilteredCocktails = () => {
   const [filtered, setFiltered] = useState([]);
-  const [filters, setFilters] = useState("Shot");
+  const [filters, setFilters] = useState("");
   const [categories, setCategories] = useState([]);
   const [cocktails, setCocktails] = useState(API_FILTER + filters);
 const fetchCocktails = () =>{
@@ -33,6 +33,7 @@ const fetchCategories = () =>{
   return (
     <div>
       <select onChange={(e) => {setFilters(e.target.value)}}>
+        <option value="">none</option>
         {categories.map(cat=> <option value={cat.strCategory }>{cat.strCategory }</option>) }
 
       </select>
