@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./GetFilteredCocktails.css";
 
 const API_FILTER = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=";
-const API_CATEGORIES =
-  "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list";
+const API_CATEGORIES = "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list";
 
 const GetFilteredCocktails = () => {
   const [filtered, setFiltered] = useState([]);
@@ -48,10 +48,12 @@ const GetFilteredCocktails = () => {
       {filtered && (
         <div className="flex">
           {filtered.map((cocktail) => (
-            <div className="box">
-              <img className="DrinkThumb" src={cocktail.strDrinkThumb} />
-              <p>{cocktail.strDrink}</p>
-            </div>
+            <Link>
+              <div className="box">
+                <img className="DrinkThumb" src={cocktail.strDrinkThumb} />
+                <p>{cocktail.strDrink}</p>
+              </div>
+            </Link>
           ))}
         </div>
       )}

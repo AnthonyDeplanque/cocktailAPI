@@ -1,30 +1,26 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
+import { useState } from "react";
+import fetchCocktail from '../utils/fetchCocktails';
+
 import "./GetCocktailsList.css";
 
-const API_RANDOM = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+import API_RANDOM from '../constants/API'
 
 const GetCocktailsList = () => {
   const [cocktail, setCocktail] = useState([{}]);
-  const [cocktailRandom, setCocktailRandom] = useState(API_RANDOM);
-
+  const cocktailRandom = API_RANDOM;
+  
   const {
     strDrink,
     strAlcoholic,
     strInstructions,
     strDrinkThumb,
   } = cocktail[0];
-  useEffect(() => {
-      fetchCocktail();
-}, []);
-function fetchCocktail(){
-      axios
-        .get(cocktailRandom)
-        .then((r) => r.data)
-        .then((r) => r.drinks)
-        .then((cocktailDTO)=>setCocktail(cocktailDTO));
-  }
+
+  useEffect( ()=> {
+    fetchCocktail(cocktailRandom,setCocktail); 
+  },[cocktailRandom]);
+
 
   return (
     <>
@@ -34,7 +30,7 @@ function fetchCocktail(){
           <h1> {strDrink}</h1>
           <h4>{strAlcoholic}</h4>
           <p>{strInstructions}</p>
-          <button onClick={fetchCocktail}>Another ?</button>
+          <button onClick={() => fetchCocktail(cocktailRandom,setCocktail)}>Another ?</button>
         </div>
       ) : <p>fetching cocktail</p>}
     </>
