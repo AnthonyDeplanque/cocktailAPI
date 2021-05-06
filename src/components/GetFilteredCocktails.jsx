@@ -1,25 +1,19 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
+import fetchFilteredCocktails from '../utils/fetchFilteredCocktails';
 import "./GetFilteredCocktails.css";
+import {API_CATEGORIES, API_FILTER } from "../constants/API";
 
-const API_FILTER = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=";
-const API_CATEGORIES = "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list";
 
 const GetFilteredCocktails = () => {
   const [filtered, setFiltered] = useState([]);
   const [filters, setFilters] = useState("");
   const [categories, setCategories] = useState([]);
   const [cocktails, setCocktails] = useState(API_FILTER + filters);
-  const fetchCocktails = () => {
-    axios
-      .get(cocktails)
-      .then((r) => r.data)
-      .then((r) => r.drinks)
-      .then(setFiltered);
-    setCocktails(API_FILTER + filters);
-  };
+  const [viewCocktail, setViewCocktail] = useState();
+
+
   const fetchCategories = () => {
     axios
       .get(API_CATEGORIES)
@@ -29,7 +23,7 @@ const GetFilteredCocktails = () => {
   };
   useEffect(() => {
     fetchCategories();
-    fetchCocktails();
+    fetchFilteredCocktails(cocktails, setCocktails, filters, setFiltered);
   }, [filters, categories]);
 
   return (
@@ -48,12 +42,10 @@ const GetFilteredCocktails = () => {
       {filtered && (
         <div className="flex">
           {filtered.map((cocktail) => (
-            <Link>
               <div className="box">
                 <img className="DrinkThumb" src={cocktail.strDrinkThumb} />
                 <p>{cocktail.strDrink}</p>
               </div>
-            </Link>
           ))}
         </div>
       )}
