@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import fetchCocktail from '../utils/fetchCocktails';
-import {API_RANDOM} from '../constants/API'
+import API_RANDOM from '../constants/API_RANDOM';
 
 import "./GetCocktailsList.css";
 
@@ -19,7 +19,7 @@ const GetCocktailsList = () => {
 
   useEffect( ()=> {
     fetchCocktail(cocktailRandom,setCocktail); 
-    console.log("drink carefully !")
+    console.log("drink carefully")
   },[cocktailRandom]);
 
 
