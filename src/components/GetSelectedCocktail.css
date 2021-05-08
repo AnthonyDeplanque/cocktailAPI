@@ -1,0 +1,16 @@
+.cocktail-box {
+    margin: 15px;
+}
+
+.ingredients-list {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.cocktail-image {
+    width: 150px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}

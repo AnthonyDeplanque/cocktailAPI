@@ -26,7 +26,7 @@ const GetCocktailsList = () => {
     <>
       {cocktail ? (
         <div className="cardDrink">
-          <img className="drinkImg" src={strDrinkThumb} />
+          <img className="drinkImg" src={strDrinkThumb} alt={strDrink}/>
           <h1> {strDrink}</h1>
           <h4>{strAlcoholic}</h4>
           <p>{strInstructions}</p>
