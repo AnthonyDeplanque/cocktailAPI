@@ -41,14 +41,15 @@ const GetFilteredCocktails = () => {
             <div className="box">
               <img className="DrinkThumb" src={cocktail.strDrinkThumb} />
               <p>{cocktail.strDrink}</p>
-              <button
+              {!handlerDisplay && <button
                 onClick={() => {
                   setViewCocktail(cocktail.idDrink);
                   setHandlerDisplay(true);
                 }}
-              >
+                >
                 Show me !
               </button>
+              }
             </div>
           ))}
           {handlerDisplay && <div className="sticky-cocktail">
@@ -62,3 +63,4 @@ const GetFilteredCocktails = () => {
 };
 
 export default GetFilteredCocktails;
+
