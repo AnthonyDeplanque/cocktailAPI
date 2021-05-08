@@ -19,7 +19,6 @@ const GetCocktailsList = () => {
 
   useEffect( ()=> {
     fetchCocktail(cocktailRandom,setCocktail); 
-    console.log("drink carefully")
   },[cocktailRandom]);
 
 

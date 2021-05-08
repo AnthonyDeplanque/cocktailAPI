@@ -1,17 +1,35 @@
-.DrinkThumb{
-    width:50px;
-    border-radius:25px;
+.DrinkThumb {
+    width: 50px;
+    border-radius: 25px;
 }
-.flex{
-    display : flex;
+
+.flex {
+    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.box{
-    min-width : 300px;
-    min-height:100px;
-    box-shadow : 5px 5px 10px rgba(0,0,0,0.4);
-    margin : 5px;
-    padding : 10px;
-    border-radius:15px;
+
+.box {
+    min-width: 300px;
+    min-height: 100px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.sticky-cocktail {
+    width: 75%;
+    height: 75%;
+    position: absolute;
+    background: white;
+    align-items: center;
+    align-content: center;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.sticky-button {
+    right: 0;
+    top: 0;
 }

@@ -52,10 +52,12 @@ const GetFilteredCocktails = () => {
               }
             </div>
           ))}
-          {handlerDisplay && <div className="sticky-cocktail">
+          {handlerDisplay && (
+            <div className="sticky-cocktail">
+           <button className="sticky-button" onClick={()=>setHandlerDisplay(false)}>X</button>
            <GetSelectedCocktail cocktailId={viewCocktail} />
-           <button onClick={()=>setHandlerDisplay(false)}>X</button>
-           </div>}
+            </div>
+          )}
         </div>
       )}
     </div>
