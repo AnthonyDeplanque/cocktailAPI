@@ -1,17 +1,14 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import API_NAME from "../constants/API_NAME";
+import { useState, useEffect } from 'react';
+import fecthSearchedCocktails from '../utils/fetchSelectedCocktail';
 
 export default function SearchCocktail() {
   const [searchCocktail, setSearchCocktail] = useState('');
   const [cocktailsToSearch, setCocktailsToSearch] = useState('');
   const [fetchedCocktail, setFetchedCocktail] = useState([]);
   useEffect(() => {
-    axios
-      .get(`${API_NAME}${cocktailsToSearch}`)
-      .then((r) => r.data.drinks)
-      .then(setFetchedCocktail);
-  }, [cocktailsToSearch, fetchedCocktail]);
+      fecthSearchedCocktails(cocktailsToSearch, setFetchedCocktail);
+}, [cocktailsToSearch, fetchedCocktail]);
+
   return (
     <div className="search-cocktail-block">
       <input
