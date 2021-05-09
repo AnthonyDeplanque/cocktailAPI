@@ -2,7 +2,7 @@ import "./Footer.css";
 
 export default function Footer(){
     return <div className="footer">
-        <p className="Legal">
+        <p className="legal">
             This website is intended for adults
             over 21 and of legal drinking age.
             We encourage responsible drinking only.
