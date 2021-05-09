@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import GetRandomCocktail from './components/GetRandomCocktail';
 import GetFilteredCocktails from './components/GetFilteredCocktails';
+import SearchCocktail from './components/SearchCocktail';
 import Footer from './components/Footer';
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
             <li>
               <Link to="/RandomCocktail">Random Cocktail</Link>
             </li>
+            <li>
+              <Link to="/SearchCocktail">Search a Cocktail</Link>
+            </li>
           </ul>
         </nav>
 
@@ -26,8 +30,11 @@ function App() {
           <Route path="/RandomCocktail">
             <GetRandomCocktail />
           </Route>
+          <Route path="/SearchCocktail">
+            <SearchCocktail />
+          </Route>
         </Switch>
-        <Footer></Footer>
+        <Footer />
       </div>
     </Router>
     </div>

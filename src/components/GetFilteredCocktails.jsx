@@ -39,7 +39,7 @@ const GetFilteredCocktails = () => {
         <div className="flex-cocktail-list">
           {filtered.map((cocktail) => (
             <div className="cocktail-littlebox">
-              <img className="cocktail-list-drinkThumb" src={cocktail.strDrinkThumb} />
+              <img className="cocktail-list-drinkThumb" src={cocktail.strDrinkThumb} alt={cocktail.idDrink}/>
               <p>{cocktail.strDrink}</p>
               {!handlerDisplay && <button
                 onClick={() => {

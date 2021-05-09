@@ -1,7 +1,6 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
-import API_ID from "../constants/API_ID";
 import "./GetSelectedCocktail.css";
+import fetchSelectedCocktail from '../utils/fetchSelectedCocktail'
 
 function GetSelectedCocktail(viewCocktail) {
   const [viewedCocktail, setViewedCocktail] = useState({});
@@ -12,9 +11,6 @@ function GetSelectedCocktail(viewCocktail) {
     strDrinkAlternate,
     strDrinkThumb,
     strGlass,
-    strIBA,
-    strImageAttribution,
-    strImageSource,
     strIngredient,
     strIngredient10,
     strIngredient11,
@@ -49,15 +45,10 @@ function GetSelectedCocktail(viewCocktail) {
   } = viewedCocktail;
 
   useEffect(() => {
-    axios
-      .get(`${API_ID}${viewCocktail.cocktailId}`)
-      .then((r) => r.data)
-      .then((r) => r.drinks)
-      .then((r) => r)
-      .then((r) => setViewedCocktail(r[0]));
-    console.log(viewedCocktail);
+    fetchSelectedCocktail(viewCocktail, setViewedCocktail);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [viewCocktail.cocktailId, idDrink]);
+
 
   if (idDrink) {
     return (
