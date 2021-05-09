@@ -65,23 +65,23 @@ useEffect(() => {
       {strDrinkAlternate && <p><em>{strDrinkAlternate}</em></p>}
       <h3>{strAlcoholic}</h3>
       <img className="cocktail-image" src={strDrinkThumb} alt={idDrink}/>
-      <p>{strGlass}</p>
+      <p>serve in a <strong>{strGlass}</strong></p>
       <div className="ingredients-list">
-        {strIngredient && <p>{strMeasure1} <strong>{strIngredient}</strong></p>}
-        {strIngredient2 && <p>{strMeasure2} <strong>{strIngredient2}</strong></p>}
-        {strIngredient3 && <p>{strMeasure3} <strong>{strIngredient3}</strong></p>}
-        {strIngredient4 && <p>{strMeasure4} <strong>{strIngredient4}</strong></p>}
-        {strIngredient5 && <p>{strMeasure5} <strong>{strIngredient5}</strong></p>}
-        {strIngredient6 && <p>{strMeasure6} <strong>{strIngredient6}</strong></p>}
-        {strIngredient7 && <p>{strMeasure7} <strong>{strIngredient7}</strong></p>}
-        {strIngredient8 && <p>{strMeasure8} <strong>{strIngredient8}</strong></p>}
-        {strIngredient9 && <p>{strMeasure9} <strong>{strIngredient9}</strong></p>}
-        {strIngredient10 && <p>{strMeasure10} <strong>{strIngredient10}</strong></p>}
-        {strIngredient11 && <p>{strMeasure11} <strong>{strIngredient11}</strong></p>}
-        {strIngredient12 && <p>{strMeasure12} <strong>{strIngredient12}</strong></p>}
-        {strIngredient13 && <p>{strMeasure13} <strong>{strIngredient13}</strong></p>}
-        {strIngredient14 && <p>{strMeasure14} <strong>{strIngredient14}</strong></p>}
-        {strIngredient15 && <p>{strMeasure15} <strong>{strIngredient15}</strong></p>}
+        {strIngredient && <p className="ingredient">{strMeasure1} <strong>{strIngredient}</strong></p>}
+        {strIngredient2 && <p className="ingredient">{strMeasure2} <strong>{strIngredient2}</strong></p>}
+        {strIngredient3 && <p className="ingredient">{strMeasure3} <strong>{strIngredient3}</strong></p>}
+        {strIngredient4 && <p className="ingredient">{strMeasure4} <strong>{strIngredient4}</strong></p>}
+        {strIngredient5 && <p className="ingredient">{strMeasure5} <strong>{strIngredient5}</strong></p>}
+        {strIngredient6 && <p className="ingredient">{strMeasure6} <strong>{strIngredient6}</strong></p>}
+        {strIngredient7 && <p className="ingredient">{strMeasure7} <strong>{strIngredient7}</strong></p>}
+        {strIngredient8 && <p className="ingredient">{strMeasure8} <strong>{strIngredient8}</strong></p>}
+        {strIngredient9 && <p className="ingredient">{strMeasure9} <strong>{strIngredient9}</strong></p>}
+        {strIngredient10 && <p className="ingredient">{strMeasure10} <strong>{strIngredient10}</strong></p>}
+        {strIngredient11 && <p className="ingredient">{strMeasure11} <strong>{strIngredient11}</strong></p>}
+        {strIngredient12 && <p className="ingredient">{strMeasure12} <strong>{strIngredient12}</strong></p>}
+        {strIngredient13 && <p className="ingredient">{strMeasure13} <strong>{strIngredient13}</strong></p>}
+        {strIngredient14 && <p className="ingredient">{strMeasure14} <strong>{strIngredient14}</strong></p>}
+        {strIngredient15 && <p className="ingredient">{strMeasure15} <strong>{strIngredient15}</strong></p>}
         </div>  
         {strInstructions && <p>{strInstructions}</p>}
     </div>

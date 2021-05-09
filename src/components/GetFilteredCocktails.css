@@ -1,17 +1,20 @@
-.DrinkThumb {
+.cocktail-list-drinkThumb {
     width: 50px;
     border-radius: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
-.flex {
+.flex-cocktail-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.box {
+.cocktail-littlebox {
     min-width: 300px;
     min-height: 100px;
+    text-align:center;
+    background : beige;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
     margin: 5px;
     padding: 10px;
@@ -21,14 +24,19 @@
 .sticky-cocktail {
     width: 75%;
     height: 75%;
-    position: absolute;
+    position: fixed;
     background: white;
+    opacity: 90%;
     border-radius: 25px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
-.sticky-button {
+.quit-button {
     position: absolute;
+    background : red;
+    color:white;
+    font-weight: bold;
+    border-radius:5px;
     right: 15px;
     top: 15px;
 }

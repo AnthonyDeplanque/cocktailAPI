@@ -1,13 +1,18 @@
 .cocktail-box {
     margin: 15px;
+
 }
 
 .ingredients-list {
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius:10px;
 }
-
+.ingredient {
+    padding: 5px;
+}
 .cocktail-image {
     width: 150px;
     height: auto;

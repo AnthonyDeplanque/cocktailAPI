@@ -1,10 +1,11 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import GetCocktailsList from './components/GetCocktailsList';
+import GetRandomCocktail from './components/GetRandomCocktail';
 import GetFilteredCocktails from './components/GetFilteredCocktails';
+import Footer from './components/Footer';
 function App() {
   return (
-    <>
+    <div className="app">
 <Router>
       <div>
         <nav>
@@ -23,12 +24,13 @@ function App() {
             <GetFilteredCocktails />
           </Route>
           <Route path="/RandomCocktail">
-            <GetCocktailsList />
+            <GetRandomCocktail />
           </Route>
         </Switch>
+        <Footer></Footer>
       </div>
     </Router>
-    </>
+    </div>
   );
 }
 

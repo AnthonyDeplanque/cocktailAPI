@@ -3,7 +3,7 @@ import { useState } from "react";
 import fetchCocktail from '../utils/fetchCocktails';
 import API_RANDOM from '../constants/API_RANDOM';
 
-import "./GetCocktailsList.css";
+import "./GetRandomCocktail.css";
 
 
 const GetCocktailsList = () => {

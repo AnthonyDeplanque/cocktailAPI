@@ -36,10 +36,10 @@ const GetFilteredCocktails = () => {
       <h1>{filters}</h1>
 
       {filtered && (
-        <div className="flex">
+        <div className="flex-cocktail-list">
           {filtered.map((cocktail) => (
-            <div className="box">
-              <img className="DrinkThumb" src={cocktail.strDrinkThumb} />
+            <div className="cocktail-littlebox">
+              <img className="cocktail-list-drinkThumb" src={cocktail.strDrinkThumb} />
               <p>{cocktail.strDrink}</p>
               {!handlerDisplay && <button
                 onClick={() => {
@@ -54,7 +54,7 @@ const GetFilteredCocktails = () => {
           ))}
           {handlerDisplay && (
             <div className="sticky-cocktail">
-           <button className="sticky-button" onClick={()=>setHandlerDisplay(false)}>X</button>
+           <button className="quit-button" onClick={()=>setHandlerDisplay(false)}>X</button>
            <GetSelectedCocktail cocktailId={viewCocktail} />
             </div>
           )}
