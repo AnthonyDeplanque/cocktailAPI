@@ -1,17 +1,16 @@
 import { React, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import fetchFilteredCocktails from '../utils/fetchFilteredCocktails';
 import fetchCategories from '../utils/fetchCategories';
 import API_FILTER from '../constants/API_FILTER';
-import GetSelectedCocktail from './GetSelectedCocktail';
 import './GetFilteredCocktails.css';
+import './GetSelectedCocktail.css';
 
 const GetFilteredCocktails = () => {
   const [filtered, setFiltered] = useState([]);
   const [filters, setFilters] = useState('');
   const [categories, setCategories] = useState([]);
   const [cocktails, setCocktails] = useState(API_FILTER + filters);
-  const [viewCocktail, setViewCocktail] = useState('');
-  const [handlerDisplay, setHandlerDisplay] = useState(false);
 
   useEffect(() => {
     fetchCategories(setCategories);
@@ -31,44 +30,22 @@ const GetFilteredCocktails = () => {
           <option value={cat.strCategory}>{cat.strCategory}</option>
         ))}
       </select>
-
       <h1>{filters}</h1>
-
       {filtered && (
         <div className="flex-cocktail-list">
           {filtered.map((cocktail) => (
             <div className="cocktail-littlebox">
-              <img
-                className="cocktail-list-drinkThumb"
-                src={cocktail.strDrinkThumb}
-                alt={cocktail.idDrink}
-              />
-              <p>{cocktail.strDrink}</p>
-              {!handlerDisplay && (
-                <button
-                  type="submit"
-                  onClick={() => {
-                    setViewCocktail(cocktail.idDrink);
-                    setHandlerDisplay(true);
-                  }}
-                >
-                  Show me !
-                </button>
-              )}
+              <Link to={`/cocktail/${cocktail.idDrink}`}>
+                <img
+                  className="searched-drinkthumb"
+                  src={cocktail.strDrinkThumb}
+                  alt={cocktail.idDrink}
+                />
+                {cocktail.strDrink}
+              </Link>
+              )
             </div>
           ))}
-          {handlerDisplay && (
-            <div className="sticky-cocktail">
-              <button
-                type="submit"
-                className="quit-button"
-                onClick={() => setHandlerDisplay(false)}
-              >
-                X
-              </button>
-              <GetSelectedCocktail cocktailId={viewCocktail} />
-            </div>
-          )}
         </div>
       )}
     </div>

@@ -53,7 +53,7 @@ export default function DisplayCocktail() {
   } = cocktail;
 
   return (
-    <div className="cocktail-box">
+    <div className="cardDrink">
       <h1>{strDrink}</h1>
       {strDrinkAlternate && (
         <p>
