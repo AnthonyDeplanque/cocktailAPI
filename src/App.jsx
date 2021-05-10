@@ -7,6 +7,7 @@ import GetRandomCocktail from './components/GetRandomCocktail';
 import GetFilteredCocktails from './components/GetFilteredCocktails';
 import SearchCocktail from './components/SearchCocktail';
 import Footer from './components/Footer';
+import DisplayCocktail from './components/DisplayCocktail';
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path="/SearchCocktail">
               <SearchCocktail />
+            </Route>
+            <Route path="/Cocktail/:idDrink">
+              <DisplayCocktail />
             </Route>
           </Switch>
           <Footer />

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import fetchSearchedCocktails from '../utils/fetchSearchedCocktails';
 import './SearchCocktail.css';
 
@@ -28,8 +29,12 @@ export default function SearchCocktail() {
           <ul>
             {fetchedCocktail.map((e) => (
               <li>
-                <img className="searched-drinkthumb" src={e.strDrinkThumb} alt={e.idDrink} />
-                {e.strDrink}
+                <img
+                  className="searched-drinkthumb"
+                  src={e.strDrinkThumb}
+                  alt={e.idDrink}
+                />
+                <Link to={`/cocktail/${e.idDrink}`}>{e.strDrink}</Link>
               </li>
             ))}
           </ul>
