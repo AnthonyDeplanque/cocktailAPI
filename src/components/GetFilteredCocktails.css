@@ -29,6 +29,7 @@
     opacity: 90%;
     border-radius: 25px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    z-index:10;
 }
 
 .quit-button {

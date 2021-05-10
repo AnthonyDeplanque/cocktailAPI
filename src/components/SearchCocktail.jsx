@@ -9,7 +9,7 @@ export default function SearchCocktail() {
   const [fetchedCocktail, setFetchedCocktail] = useState(['']);
   useEffect(() => {
     fetchSearchedCocktails(cocktailsToSearch, setFetchedCocktail);
-  }, [cocktailsToSearch, fetchedCocktail]);
+  }, [cocktailsToSearch]);
 
   return (
     <div className="search-cocktail-block">
@@ -25,16 +25,18 @@ export default function SearchCocktail() {
       </button>
       {fetchedCocktail && (
         <div className="searched-cocktailList">
-          <p>found {fetchedCocktail.length} cocktails !</p>
+          <p>found {fetchedCocktail.length} cocktail{(fetchedCocktail.length > 1) ? 's' : null }</p>
           <ul>
             {fetchedCocktail.map((e) => (
               <li>
-                <img
-                  className="searched-drinkthumb"
-                  src={e.strDrinkThumb}
-                  alt={e.idDrink}
-                />
-                <Link to={`/cocktail/${e.idDrink}`}>{e.strDrink}</Link>
+                <Link to={`/cocktail/${e.idDrink}`}>
+                  <img
+                    className="searched-drinkthumb"
+                    src={e.strDrinkThumb}
+                    alt={e.idDrink}
+                  />
+                  {e.strDrink}
+                </Link>
               </li>
             ))}
           </ul>

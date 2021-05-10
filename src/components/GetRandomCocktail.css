@@ -1,12 +1,24 @@
 .cardDrink{
-height : 600px;
 width : 800px;
 border-radius : 5px;
 padding :15px;
+margin : 20px;
+align-items:center ;
+border-radius: 25px;
+box-shadow : 5px 5px 15px rgba(0,0,0,0.4);
 }
 .drinkImg{
     height : 250px;
     width: auto;
     border-radius : 50%;
     box-shadow : 5px 5px 5px rgba(0,0,0,0.4);
+}
+.cardDrink-element{
+   display: flex;
+    padding : 15px;
+    margin : 15px;
+    align-items: center;
+}
+.cardDrink-title{
+    flex-direction: column;
 }
