@@ -4,11 +4,8 @@ This web application display a random cocktail generator and a filtered list of 
 
 This application uses the free version of the  [cocktail API](https://www.thecocktaildb.com/api.php)
 
-This is a __work-in-progress__ application. Don't mind if all the functionnalities arent done yet.
+This is a *work-in-progress* application. Don't mind if all the functionnalities aren't done yet.
 
 __Feel free to send feedbacks !__
-  
-    
-      
-      
+
 >All content on this website is for informational and educational purposes only.
