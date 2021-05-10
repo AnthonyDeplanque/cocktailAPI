@@ -1,29 +1,36 @@
 import { useState, useEffect } from 'react';
-import fecthSearchedCocktails from '../utils/fetchSelectedCocktail';
+import fetchSearchedCocktails from '../utils/fetchSearchedCocktails';
+import './SearchCocktail.css';
 
 export default function SearchCocktail() {
   const [searchCocktail, setSearchCocktail] = useState('');
   const [cocktailsToSearch, setCocktailsToSearch] = useState('');
-  const [fetchedCocktail, setFetchedCocktail] = useState([]);
+  const [fetchedCocktail, setFetchedCocktail] = useState(['']);
   useEffect(() => {
-      fecthSearchedCocktails(cocktailsToSearch, setFetchedCocktail);
-}, [cocktailsToSearch, fetchedCocktail]);
+    fetchSearchedCocktails(cocktailsToSearch, setFetchedCocktail);
+  }, [cocktailsToSearch, fetchedCocktail]);
 
   return (
     <div className="search-cocktail-block">
       <input
         placeholder="search a cocktail"
         onChange={(e) => setSearchCocktail(e.target.value)}
-      ></input>
-      <button onClick={() => setCocktailsToSearch(searchCocktail)}>
+      />
+      <button
+        type="submit"
+        onClick={() => setCocktailsToSearch(searchCocktail)}
+      >
         Search Cocktail !
       </button>
       {fetchedCocktail && (
         <div className="searched-cocktailList">
-            <p>found {fetchedCocktail.length} cocktails !</p>
+          <p>found {fetchedCocktail.length} cocktails !</p>
           <ul>
-            {fetchedCocktail.map((e, i) => (
-              <li>{e.strDrink}</li>
+            {fetchedCocktail.map((e) => (
+              <li>
+                <img className="searched-drinkthumb" src={e.strDrinkThumb} alt={e.idDrink} />
+                {e.strDrink}
+              </li>
             ))}
           </ul>
         </div>

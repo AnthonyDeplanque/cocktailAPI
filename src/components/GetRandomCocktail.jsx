@@ -1,15 +1,13 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import { React, useEffect, useState } from 'react';
 import fetchCocktail from '../utils/fetchCocktails';
 import API_RANDOM from '../constants/API_RANDOM';
 
-import "./GetRandomCocktail.css";
-
+import './GetRandomCocktail.css';
 
 const GetCocktailsList = () => {
   const [cocktail, setCocktail] = useState([{}]);
   const cocktailRandom = API_RANDOM;
-  
+
   const {
     strDrink,
     strAlcoholic,
@@ -17,22 +15,28 @@ const GetCocktailsList = () => {
     strDrinkThumb,
   } = cocktail[0];
 
-  useEffect( ()=> {
-    fetchCocktail(cocktailRandom,setCocktail); 
-  },[cocktailRandom]);
-
+  useEffect(() => {
+    fetchCocktail(cocktailRandom, setCocktail);
+  }, [cocktailRandom]);
 
   return (
     <>
       {cocktail ? (
         <div className="cardDrink">
-          <img className="drinkImg" src={strDrinkThumb} alt={strDrink}/>
+          <img className="drinkImg" src={strDrinkThumb} alt={strDrink} />
           <h1> {strDrink}</h1>
           <h4>{strAlcoholic}</h4>
           <p>{strInstructions}</p>
-          <button onClick={() => fetchCocktail(cocktailRandom,setCocktail)}>Another ?</button>
+          <button
+            type="submit"
+            onClick={() => fetchCocktail(cocktailRandom, setCocktail)}
+          >
+            Another ?
+          </button>
         </div>
-      ) : <p>fetching cocktail</p>}
+      ) : (
+        <p>fetching cocktail</p>
+      )}
     </>
   );
 };

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import "./GetSelectedCocktail.css";
-import fetchSelectedCocktail from '../utils/fetchSelectedCocktail'
+import { useEffect, useState } from 'react';
+import './GetSelectedCocktail.css';
+import fetchSelectedCocktail from '../utils/fetchSelectedCocktail';
 
 function GetSelectedCocktail(viewCocktail) {
   const [viewedCocktail, setViewedCocktail] = useState({});
@@ -46,9 +46,8 @@ function GetSelectedCocktail(viewCocktail) {
 
   useEffect(() => {
     fetchSelectedCocktail(viewCocktail, setViewedCocktail);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react/destructuring-assignment
   }, [viewCocktail.cocktailId, idDrink]);
-
 
   if (idDrink) {
     return (
@@ -152,6 +151,6 @@ function GetSelectedCocktail(viewCocktail) {
         </div>
       </div>
     );
-  } else return null;
+  } return null;
 }
 export default GetSelectedCocktail;
