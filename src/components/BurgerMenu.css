@@ -1,0 +1,41 @@
+.burger-menu{
+  position:absolute;
+  height : 70px;
+  width : 70px;
+  background: white;
+  left:0;
+  top:0;
+  border-radius: 10% 10% 10% 10%/ 10% 10% 10% 10% ;
+  box-shadow: 5px 5px 15px rgba(0,0,0,70%);
+  transition: all 1s ease-in-out;
+}
+.line{
+  position :absolute;
+  background-color :grey;
+  width : 55px;
+  height : 10px;
+  left : 7.5px;
+  border-radius : 10% 10% 10% 10%/ 50% 50% 50% 50% ;
+  transition : all 0.5s ease-in-out; 
+}
+.line-1{  top : 10px;}
+.line-2{  top : 30px;}
+.line-3{  top : 50px;}
+
+.burger-menu:hover .line{
+  background-color: darkgrey;
+}
+.burger-menu:hover .line-1 {
+  transform: rotate( 45deg) translate(14px, 14px);
+} 
+.burger-menu:hover .line-2 {
+  transform: scaleX(0.0);
+  border-radius: 50%;
+}
+.burger-menu:hover .line-3 { 
+  transform: rotate(-45deg) translate(14px, -14px);
+}
+.burger-menu:hover {
+  background-color: white;
+  box-shadow: -5px -5px 15px rgba(0,0,0,70%);
+}
