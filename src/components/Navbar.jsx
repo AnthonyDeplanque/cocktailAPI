@@ -1,13 +1,10 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './BurgerMenu.css';
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
-  useEffect(() => {
-    console.log(showMenu);
-  }, [showMenu]);
 
   return (
     <nav className="navbar">
