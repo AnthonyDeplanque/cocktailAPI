@@ -1,20 +1,27 @@
 .navbar{
 position : sticky;
 background: white;
-padding: 25px;
+padding: 15px;
 width : 100%!important; 
+}
+.flex-title{
+  display : flex;
+  justify-content: space-around;
 }
 .navbar-list{
 display: flex;
 flex-direction: row;
 justify-content:space-evenly;
 padding:15px;
+height : 100px;
 }
 .navbar-list li{
-  font-size:  2rem;
+  font-size:  1.4rem;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
-  border-radius:25px;
+  border-radius:10% 10% 10% 10% / 20% 20% 20% 20%;
   margin:15px;
+  padding : 15px;
+  background: linear-gradient(60deg, #CCC, #FFF);
   align-self: center;
 }
 .navbar-logo{
