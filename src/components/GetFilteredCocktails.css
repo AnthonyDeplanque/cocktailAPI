@@ -13,8 +13,8 @@
 .cocktail-littlebox {
     min-width: 300px;
     min-height: 100px;
-    text-align:center;
-    background : beige;
+    text-align: center;
+    background: beige;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
     margin: 5px;
     padding: 10px;
@@ -29,17 +29,64 @@
     opacity: 90%;
     border-radius: 25px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-    z-index:10;
+    z-index: 10;
 }
 
 .quit-button {
     position: absolute;
-    background : brown;
-    color:white;
+    background: brown;
+    color: white;
     font-weight: bold;
-    border-radius:5px;
+    border-radius: 5px;
     right: 15px;
     top: 15px;
-    height:25px;
-    width:25px;
+    height: 25px;
+    width: 25px;
+}
+
+.cocktail-box {
+    margin: 15px;
+}
+
+.cocktail-elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.cocktail-intro {
+    text-align: right;
+    margin: 15px;
+    width: 35%;
+}
+
+.cocktail-making {
+    text-align: left;
+    padding: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    width: 35%;
+    height: auto;
+}
+
+.ingredients-list {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.ingredients-list ul {
+    list-style: none;
+    margin: 5px;
+}
+
+.ingredient {
+    padding: 5px;
+}
+
+.cocktail-image {
+    width: 250px;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }

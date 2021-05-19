@@ -4,7 +4,6 @@ import fetchFilteredCocktails from '../utils/fetchFilteredCocktails';
 import fetchCategories from '../utils/fetchCategories';
 import API_FILTER from '../constants/API_FILTER';
 import './GetFilteredCocktails.css';
-import './GetSelectedCocktail.css';
 
 const GetFilteredCocktails = () => {
   const [filtered, setFiltered] = useState([]);
