@@ -3,7 +3,7 @@ background:white;
 font-size:.5rem;
 position: fixed;
 display:flex;
-flex-wrap:wrap;
+flex-direction : row;
 justify-content: space-around;
 align-items: center;
 height : auto;
@@ -15,4 +15,34 @@ padding-top:1em;
 .legal{
     width : 50%;
     text-align: center;
+}
+.icons img{
+    filter: invert(1);
+
+    height : auto;
+    border-radius: 50%;
+
+}
+@media (min-width:700px){
+    .icons img{
+        width : 3rem;
+        padding: 1rem;
+    }
+    .copyright img{
+        width : 5rem;
+}
+}
+@media (max-width:700px){
+    .icons img{
+        width : 1.5rem;
+        padding: .1rem;
+    }
+    .copyright img{
+        width : 2.5rem;
+}
+}
+.copyright img{
+    width : 5rem;
+    height : auto;
+    border-radius: 50%;
 }

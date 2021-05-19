@@ -41,7 +41,7 @@ function App() {
     <div className="disclaimer">
       <h1>WELCOME TO THE COCKTAIL DISPENSER</h1>
       <p>
-        This application uses the cocktail DB, An open,
+        This application uses <a href="https://www.thecocktaildb.com/">the cocktail DB</a>, An open,
         crowd-sourced database of drinks and cocktails from around the world.
       </p>
       <p>by clicking on the &apos;I Agree&apos; button, you certify that you are

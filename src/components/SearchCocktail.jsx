@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import fetchSearchedCocktails from '../utils/fetchSearchedCocktails';
 import './SearchCocktail.css';
+import './GetFilteredCocktails.css';
 
 export default function SearchCocktail() {
   const [searchCocktail, setSearchCocktail] = useState('');
@@ -24,11 +25,11 @@ export default function SearchCocktail() {
         Search Cocktail !
       </button>
       {fetchedCocktail && (
-        <div className="searched-cocktailList">
+        <>
           <p>found {fetchedCocktail.length} cocktail{(fetchedCocktail.length > 1) ? 's' : null }</p>
-          <ul>
+          <div className="flex-cocktail-list">
             {fetchedCocktail.map((e) => (
-              <li>
+              <div className="cocktail-littlebox">
                 <Link to={`/cocktail/${e.idDrink}`}>
                   <img
                     className="searched-drinkthumb"
@@ -37,10 +38,10 @@ export default function SearchCocktail() {
                   />
                   {e.strDrink}
                 </Link>
-              </li>
+              </div>
             ))}
-          </ul>
-        </div>
+          </div>
+        </>
       )}
     </div>
   );
