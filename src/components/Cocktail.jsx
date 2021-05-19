@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+import './Cocktail.css';
+
 export default function Cocktail({ ...props }) {
   const {
     idDrink,
