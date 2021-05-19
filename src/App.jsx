@@ -20,6 +20,12 @@ function App() {
           <div className="app">
             <Switch>
               <Route exact path="/">
+                <div className="greeting">
+                  <h1>Welcome to the cocktail dispenser !</h1>
+                  <p>Click on the upper-left icon to navigate in the application.</p>
+                </div>
+              </Route>
+              <Route exact path="/Filter">
                 <GetFilteredCocktails />
               </Route>
               <Route path="/RandomCocktail">
