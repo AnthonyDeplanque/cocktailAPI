@@ -19,6 +19,7 @@ const GetFilteredCocktails = () => {
 
   return (
     <div>
+      <p>Select a cocktail category :</p>
       <select
         onChange={(e) => {
           setFilters(e.target.value);
