@@ -8,9 +8,9 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="icons">
-        <img src={linkedin} alt="LinkedIn" />
-        <img src={twitter} alt="Twitter" />
-        <img src={github} alt="Github" />
+        <a href="https://www.linkedin.com/in/anthony-deplanque/"><img src={linkedin} alt="LinkedIn" /></a>
+        <a href="https://twitter.com/Seteemio"><img src={twitter} alt="Twitter" /></a>
+        <a href="https://github.com/anthonydeplanque"><img src={github} alt="Github" /></a>
       </div>
       <div className="legal">
         <p>
@@ -21,6 +21,8 @@ export default function Footer() {
       </div>
       <div className="copyright">
         <img src={profile} alt="the author" />
+        <p>2021 - Made with love, and a lot of coffee</p>
+        <p>by Anthony Deplanque</p>
       </div>
     </div>
   );
