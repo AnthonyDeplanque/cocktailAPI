@@ -3,8 +3,6 @@ import fetchCocktail from '../utils/fetchCocktails';
 import API_RANDOM from '../constants/API_RANDOM';
 import Cocktail from './Cocktail';
 
-import './GetRandomCocktail.css';
-
 const GetCocktailsList = () => {
   const [cocktail, setCocktail] = useState([{}]);
   const cocktailRandom = API_RANDOM;
