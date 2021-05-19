@@ -17,7 +17,7 @@ export default function Navbar() {
         <div className="line line-2" />
         <div className="line line-3" />
       </div>
-
+      {!showMenu && <h1 className="flex-title">The Cocktail Dispenser !</h1> }
       {showMenu && (
         <ul className="navbar-list">
           <li>
@@ -34,7 +34,6 @@ export default function Navbar() {
               src="https://www.thecocktaildb.com/images/cocktail_right.png"
               alt="the cocktail dispenser"
             />
-            <h1>The Cocktail Dispenser !</h1>
           </div>
         </ul>
       )}
