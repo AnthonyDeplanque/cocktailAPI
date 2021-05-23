@@ -24,7 +24,10 @@ export default function Navbar() {
             <Link to="/RandomCocktail">Random Cocktail</Link>
           </li>
           <li>
-            <Link to="/Filter">Cocktail Categories</Link>
+            <Link to="/Filter/Category">Cocktail Categories</Link>
+          </li>
+          <li>
+            <Link to="/Filter/Ingredient">Cocktail Ingredients</Link>
           </li>
           <li>
             <Link to="/SearchCocktail">Search a Cocktail</Link>

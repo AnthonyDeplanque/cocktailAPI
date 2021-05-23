@@ -7,6 +7,7 @@ import SearchCocktail from './components/SearchCocktail';
 import Footer from './components/Footer';
 import DisplayCocktail from './components/DisplayCocktail';
 import Navbar from './components/Navbar';
+import GetIngredientsCocktails from './components/GetIngredientsCocktails';
 
 function App() {
   const [agreement, setAgreement] = useState(false);
@@ -25,8 +26,11 @@ function App() {
                   <p>Click on the upper-left icon to navigate in the application.</p>
                 </div>
               </Route>
-              <Route exact path="/Filter">
+              <Route exact path="/Filter/Category">
                 <GetCategoriesCocktails />
+              </Route>
+              <Route exact path="/Filter/Ingredient">
+                <GetIngredientsCocktails />
               </Route>
               <Route path="/RandomCocktail">
                 <GetRandomCocktail />
