@@ -2,11 +2,12 @@ import './App.css';
 import { React, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import GetRandomCocktail from './components/GetRandomCocktail';
-import GetFilteredCocktails from './components/GetFilteredCocktails';
+import GetCategoriesCocktails from './components/GetCategoriesCocktails';
 import SearchCocktail from './components/SearchCocktail';
 import Footer from './components/Footer';
 import DisplayCocktail from './components/DisplayCocktail';
 import Navbar from './components/Navbar';
+import GetIngredientsCocktails from './components/GetIngredientsCocktails';
 
 function App() {
   const [agreement, setAgreement] = useState(false);
@@ -25,8 +26,11 @@ function App() {
                   <p>Click on the upper-left icon to navigate in the application.</p>
                 </div>
               </Route>
-              <Route exact path="/Filter">
-                <GetFilteredCocktails />
+              <Route exact path="/Filter/Category">
+                <GetCategoriesCocktails />
+              </Route>
+              <Route exact path="/Filter/Ingredient">
+                <GetIngredientsCocktails />
               </Route>
               <Route path="/RandomCocktail">
                 <GetRandomCocktail />
