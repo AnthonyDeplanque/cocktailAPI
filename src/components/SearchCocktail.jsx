@@ -14,19 +14,25 @@ export default function SearchCocktail() {
 
   return (
     <div className="search-cocktail-block">
-      <input
-        placeholder="search a cocktail"
-        onChange={(e) => setSearchCocktail(e.target.value)}
-      />
-      <button
-        type="submit"
-        onClick={() => setCocktailsToSearch(searchCocktail)}
-      >
-        Search Cocktail !
-      </button>
-      {fetchedCocktail && (
+      <div className="filtering-block">
+        <input
+          className="filtered-items"
+          placeholder="search a cocktail"
+          onChange={(e) => setSearchCocktail(e.target.value)}
+        />
+        <button
+          className="cocktail-button"
+          type="submit"
+          onClick={() => setCocktailsToSearch(searchCocktail)}
+        >
+          Search Cocktail !
+        </button>
+      </div>
+      {fetchedCocktail ? (
         <>
-          <p>found {fetchedCocktail.length} cocktail{(fetchedCocktail.length > 1) ? 's' : null }</p>
+          {fetchedCocktail.length
+            ? <h1>Found {fetchedCocktail.length} cocktail{(fetchedCocktail.length > 1) ? 's' : null }</h1>
+            : <h1>Fetching cocktails</h1>}
           <div className="flex-cocktail-list">
             {fetchedCocktail.map((e) => (
               <div className="cocktail-littlebox">
@@ -42,7 +48,8 @@ export default function SearchCocktail() {
             ))}
           </div>
         </>
-      )}
+      )
+        : <h1>No cocktails found</h1>}
     </div>
   );
 }
