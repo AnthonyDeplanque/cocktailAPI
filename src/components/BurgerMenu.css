@@ -21,20 +21,17 @@
 .line-2{  top : 30px;}
 .line-3{  top : 50px;}
 
-.burger-menu:hover .line{
-  background-color: darkgrey;
-}
-.burger-menu:hover .line-1 {
+.line-1-open {
   transform: rotate( 45deg) translate(14px, 14px);
 } 
-.burger-menu:hover .line-2 {
+.line-2-open {
   transform: scaleX(0.0);
   border-radius: 50%;
 }
-.burger-menu:hover .line-3 { 
+  .line-3-open { 
   transform: rotate(-45deg) translate(14px, -14px);
 }
-.burger-menu:hover {
+.burger-menu-open {
   background-color: white;
   box-shadow: 5px 0 5px rgba(0,0,0,70%);
 }

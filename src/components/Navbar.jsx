@@ -10,12 +10,12 @@ export default function Navbar() {
     <nav className="navbar">
       <div
         aria-hidden="true"
-        className="burger-menu"
+        className={showMenu ? 'burger-menu burger-menu-open' : 'burger-menu'}
         onClick={() => setShowMenu(!showMenu)}
       >
-        <div className="line line-1" />
-        <div className="line line-2" />
-        <div className="line line-3" />
+        <div className={showMenu ? 'line line-1 line-1-open' : 'line line-1'} />
+        <div className={showMenu ? 'line line-2 line-2-open' : 'line line-2'} />
+        <div className={showMenu ? 'line line-3 line-3-open' : 'line line-3'} />
       </div>
       {!showMenu && <h1 className="flex-title">The Cocktail Dispenser !</h1> }
       {showMenu && (
