@@ -22,7 +22,7 @@ const GetIngredientsCocktails = () => {
       <div className="filtering-block">
         <p>Select a cocktail ingredient :</p>
         <select
-          className="filtered-items"
+          className="filtered-items element-color"
           onChange={(e) => {
             setFilters(e.target.value);
           }}

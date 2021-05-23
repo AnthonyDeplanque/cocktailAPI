@@ -51,6 +51,9 @@
 }
 
 @media (max-width:700px) {
+    .footer{
+        font-size: .4rem;
+    }
     .icons img {
         width: 25px;
         height : auto;
