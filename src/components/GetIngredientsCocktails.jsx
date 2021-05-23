@@ -19,17 +19,20 @@ const GetIngredientsCocktails = () => {
 
   return (
     <div>
-      <p>Select a cocktail Ingredient :</p>
-      <select
-        onChange={(e) => {
-          setFilters(e.target.value);
-        }}
-      >
-        <option value="">none</option>
-        {ingredients.map((cat) => (
-          <option value={cat.strIngredient1}>{cat.strIngredient1}</option>
-        ))}
-      </select>
+      <div className="filtering-block">
+        <p>Select a cocktail ingredient :</p>
+        <select
+          className="filtered-items"
+          onChange={(e) => {
+            setFilters(e.target.value);
+          }}
+        >
+          <option value="">none</option>
+          {ingredients.map((cat) => (
+            <option value={cat.strIngredient1}>{cat.strIngredient1}</option>
+          ))}
+        </select>
+      </div>
       <h1>{filters}</h1>
       {filtered && (
         <div className="flex-cocktail-list">

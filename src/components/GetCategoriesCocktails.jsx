@@ -19,17 +19,20 @@ const GetCategoriesCocktails = () => {
 
   return (
     <div>
-      <p>Select a cocktail category :</p>
-      <select
-        onChange={(e) => {
-          setFilters(e.target.value);
-        }}
-      >
-        <option value="">none</option>
-        {categories.map((cat) => (
-          <option value={cat.strCategory}>{cat.strCategory}</option>
-        ))}
-      </select>
+      <div className="filtering-block">
+        <p>Select a cocktail category :</p>
+        <select
+          className="filtered-items"
+          onChange={(e) => {
+            setFilters(e.target.value);
+          }}
+        >
+          <option value="">none</option>
+          {categories.map((cat) => (
+            <option value={cat.strCategory}>{cat.strCategory}</option>
+          ))}
+        </select>
+      </div>
       <h1>{filters}</h1>
       {filtered && (
         <div className="flex-cocktail-list">
