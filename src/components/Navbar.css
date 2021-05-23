@@ -24,6 +24,7 @@
     flex-direction: column;
     padding-top: 15px;
     align-items: center;
+    padding-bottom : 15px;
   }
   .navbar-list li {
     align-self: center;
