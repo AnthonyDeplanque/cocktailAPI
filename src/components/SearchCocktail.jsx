@@ -16,7 +16,7 @@ export default function SearchCocktail() {
     <div className="search-cocktail-block">
       <div className="filtering-block">
         <input
-          className="filtered-items"
+          className="filtered-items element-color"
           placeholder="search a cocktail"
           onChange={(e) => setSearchCocktail(e.target.value)}
         />

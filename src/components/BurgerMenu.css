@@ -1,37 +1,49 @@
-.burger-menu{
-  position:absolute;
-  height : 70px;
-  width : 70px;
+.burger-menu {
+  position: absolute;
+  height: 70px;
+  width: 70px;
   background: white;
-  left:0;
-  top:0;
-  border-radius: 10% 10% 10% 10%/ 10% 10% 10% 10% ;
+  left: 0;
+  top: 0;
+  border-radius: 10% 10% 10% 10%/ 10% 10% 10% 10%;
   transition: all 0.5s ease-in-out;
 }
-.line{
-  position :absolute;
-  background-color :grey;
-  width : 55px;
-  height : 10px;
-  left : 7.5px;
-  border-radius : 10% 10% 10% 10%/ 50% 50% 50% 50% ;
-  transition : all 0.5s ease-in-out; 
+.line {
+  position: absolute;
+  background-color: grey;
+  width: 55px;
+  height: 10px;
+  left: 7.5px;
+  border-radius: 10% 10% 10% 10%/ 50% 50% 50% 50%;
+  transition: all 0.5s ease-in-out;
 }
-.line-1{  top : 10px;}
-.line-2{  top : 30px;}
-.line-3{  top : 50px;}
+
+.line-1 {
+  top: 10px;
+}
+
+.line-2 {
+  top: 30px;
+}
+
+.line-3 {
+  top: 50px;
+}
 
 .line-1-open {
   transform: rotate( 45deg) translate(14px, 14px);
-} 
+}
+
 .line-2-open {
   transform: scaleX(0.0);
   border-radius: 50%;
 }
-  .line-3-open { 
+
+.line-3-open {
   transform: rotate(-45deg) translate(14px, -14px);
 }
+
 .burger-menu-open {
-  background-color: white;
-  box-shadow: 5px 0 5px rgba(0,0,0,70%);
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 70%);
+  background: rgb(240, 240, 240);
 }
