@@ -14,6 +14,7 @@
   align-items: center;
   align-self: center;
   border-radius: 25px;
+  background: beige;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
 
 }
@@ -42,6 +43,7 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
   width: 35%;
   height: auto;
+  background:rgb(255, 217, 167);
 }
 
 .ingredients-list {

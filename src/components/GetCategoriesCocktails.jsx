@@ -46,7 +46,6 @@ const GetCategoriesCocktails = () => {
                 />
                 {cocktail.strDrink}
               </Link>
-              )
             </div>
           ))}
         </div>
