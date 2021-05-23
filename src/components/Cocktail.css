@@ -40,10 +40,10 @@
 
 .cocktail-making {
   text-align: left;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+
   width: 35%;
   height: auto;
-  background:rgb(255, 217, 167);
+
 }
 
 .ingredients-list {
@@ -74,7 +74,7 @@
 @media (min-width:700px) {
   .cocktail-making {
     padding: 20px;
-    border-radius: 20%;
+
   }
   .cardDrink {
     width : 90%;
