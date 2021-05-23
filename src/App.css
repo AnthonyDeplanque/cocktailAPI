@@ -73,6 +73,9 @@ h1 {
   text-align: center;
   padding-bottom : 5px;
 }
+.app{
+  padding-top: 15px;
+}
 .element-color{
   min-height:25px;
   background: 
