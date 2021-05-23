@@ -62,7 +62,7 @@ function App() {
         Remember that alcohol abuse is
         dangerous for your health, consume in moderation.
       </p>
-      <button type="submit" onClick={() => handleAgreement()}>I agree</button>
+      <button className="cocktail-button" type="submit" onClick={() => handleAgreement()}>I agree</button>
     </div>
   );
 }

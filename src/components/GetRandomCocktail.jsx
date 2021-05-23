@@ -12,17 +12,20 @@ const GetCocktailsList = () => {
   }, [cocktailRandom]);
 
   return (
-    <>
-      <button
-        type="submit"
-        onClick={() => fetchCocktail(cocktailRandom, setCocktail)}
-      >
-        Another ?
-      </button>
+    <div>
+      <div className="filtering-block">
+        <button
+          className="cocktail-button"
+          type="submit"
+          onClick={() => fetchCocktail(cocktailRandom, setCocktail)}
+        >
+          Another ?
+        </button>
+      </div>
       {cocktail ? (<Cocktail {...cocktail[0]} />) : (
         <p>fetching cocktail</p>
       )}
-    </>
+    </div>
   );
 };
 

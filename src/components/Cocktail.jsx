@@ -42,7 +42,7 @@ export default function Cocktail({ ...props }) {
     strMeasure9,
   } = props;
   return (
-    <>
+    <div className="card-block">
       <div className="cardDrink">
         <h1>{strDrink}</h1>
         {strDrinkAlternate && (
@@ -142,6 +142,6 @@ export default function Cocktail({ ...props }) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -24,9 +24,12 @@
 .cocktail-box {
     margin: 15px;
 }
-.filtering-block{
+.filtering-block {
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
-    width : 75%;
-    padding : 5%;
+    align-items: center;
+}
+.filtered-items {
+    width : 25%;
 }
