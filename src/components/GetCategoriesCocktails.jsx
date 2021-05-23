@@ -2,19 +2,19 @@ import { React, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import fetchFilteredCocktails from '../utils/fetchFilteredCocktails';
 import fetchCategories from '../utils/fetchCategories';
-import API_FILTER from '../constants/API_FILTER';
+import API_FILTER_CATEGORIES from '../constants/API_FILTER_CATEGORIES';
 import './GetFilteredCocktails.css';
 
-const GetFilteredCocktails = () => {
+const GetCategoriesCocktails = () => {
   const [filtered, setFiltered] = useState([]);
   const [filters, setFilters] = useState('');
   const [categories, setCategories] = useState([]);
-  const [cocktails, setCocktails] = useState(API_FILTER + filters);
+  const [cocktails, setCocktails] = useState(API_FILTER_CATEGORIES + filters);
 
   useEffect(() => {
     fetchCategories(setCategories);
     fetchFilteredCocktails(cocktails, filters, setFiltered);
-    setCocktails(API_FILTER + filters);
+    setCocktails(API_FILTER_CATEGORIES + filters);
   }, [cocktails, filters]);
 
   return (
@@ -52,4 +52,4 @@ const GetFilteredCocktails = () => {
   );
 };
 
-export default GetFilteredCocktails;
+export default GetCategoriesCocktails;

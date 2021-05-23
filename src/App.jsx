@@ -2,7 +2,7 @@ import './App.css';
 import { React, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import GetRandomCocktail from './components/GetRandomCocktail';
-import GetFilteredCocktails from './components/GetFilteredCocktails';
+import GetCategoriesCocktails from './components/GetCategoriesCocktails';
 import SearchCocktail from './components/SearchCocktail';
 import Footer from './components/Footer';
 import DisplayCocktail from './components/DisplayCocktail';
@@ -26,7 +26,7 @@ function App() {
                 </div>
               </Route>
               <Route exact path="/Filter">
-                <GetFilteredCocktails />
+                <GetCategoriesCocktails />
               </Route>
               <Route path="/RandomCocktail">
                 <GetRandomCocktail />
