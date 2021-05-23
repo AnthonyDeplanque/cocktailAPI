@@ -5,59 +5,70 @@
   text-decoration: none;
   color: black;
 }
-
+html{
+  margin:0;
+  padding:0;
+}
 body {
   background-color: #f6f3ea;
   background-size: 32px 32px;
   background-image: repeating-linear-gradient( 45deg, #f3eed9 0, #f3eed9 3.2px, #f6f3ea 0, #f6f3ea 50%);
-  width : 100%;
-  min-height : 100%;
+
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.app {
-min-height:100%;
-padding-bottom:150px;
-}
-.disclaimer{
+.disclaimer {
   text-align: center;
   position: absolute;
-  display :flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  min-height : 50%;
-  height:auto;
-  width : 50%;
-  top:50%;
-  left: 50%;
-  transform:translateX(-50%) translateY(-50%);
-  background-color: white;
-  border-radius : 25px;
-  padding : 25px;
-  box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
-}
-.disclaimer p{
-  padding : 1rem;
-}
-.disclaimer button {
-width : 50%;
-background-color: greenyellow;
-border : 0;
-border-radius : 3px;
-height : 25px;
-box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
-}
-.disclaimer a{
-  font-style: italic;
-}
-.greeting{
+  min-height: 50%;
+  height: auto;
+  width: 50%;
   top: 50%;
   left: 50%;
-  transform:translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-color: white;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.disclaimer p {
+  padding: 1rem;
+}
+
+.cocktail-button {
+  width: 50%;
+  background-color: greenyellow;
+  border: 0;
+  border-radius: 3px;
+  height: 25px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.disclaimer a {
+  font-style: italic;
+}
+
+.greeting {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   text-align: center;
   position: absolute;
-  display :flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom : 5px;
 }
