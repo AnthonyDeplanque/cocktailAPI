@@ -3,14 +3,16 @@
     border-radius: 25px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
-.searched-cocktailList{
-display:flex;
-flex-direction:row;
-flex-wrap:wrap;
+
+.searched-cocktailList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-.search-cocktail-block{
-    padding-top:10px;
+
+.search-cocktail-block {
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
-    padding-bottom:10px;
+    padding-bottom: 10px;
 }
