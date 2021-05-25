@@ -52,16 +52,20 @@
     padding-left : 70px;
     padding-right : 35px;
     min-height: 100px;
-    }
+  }
+
 
   .navbar-list li {
-    font-size: 1.2rem;
+    display: flex;
+    font-size: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
     border-radius: 10% 10% 10% 10% / 20% 20% 20% 20%;
     border : 3px ridge brown;
-    margin: 15px;
+    margin: 5px;
     padding: 5px;
     max-width : 125px;
+    min-height : 50px;
+    align-items: center;
     text-align : center;
     align-self: center;
   }
