@@ -44,7 +44,7 @@ const GetIngredientsCocktails = () => {
                   src={cocktail.strDrinkThumb}
                   alt={cocktail.idDrink}
                 />
-                {cocktail.strDrink}
+                <div className="drinkthumb-name">{cocktail.strDrink}</div>
               </Link>
             </div>
           ))}

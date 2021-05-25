@@ -1,9 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-import API_COCKTAIL_FIRST_LETTER from '../constants/API_FIRST_LETTER';
-// import fetchFilteredCocktails from '../utils/fetchFilteredCocktails';
 import './GetFilteredCocktails.css';
+import fetchFirstLetter from '../utils/fetchFirstLetter';
 
 const firstLetter = [
   'a',
@@ -46,14 +44,9 @@ const firstLetter = [
 const GetFirstLetterCocktails = () => {
   const [filtered, setFiltered] = useState([]);
   const [filters, setFilters] = useState('');
-  //  const [cocktails, setCocktails] = useState(API_COCKTAIL_FIRST_LETTER + filters);
 
   useEffect(() => {
-    axios
-      .get(API_COCKTAIL_FIRST_LETTER + filters)
-      .then((r) => r.data.drinks)
-      .then(setFiltered);
-    console.log(filtered);
+    fetchFirstLetter(filters, setFiltered);
   }, [filters]);
 
   return (
@@ -83,7 +76,7 @@ const GetFirstLetterCocktails = () => {
                   src={cocktail.strDrinkThumb}
                   alt={cocktail.idDrink}
                 />
-                {cocktail.strDrink}
+                <div className="drinkthumb-name">{cocktail.strDrink}</div>
               </Link>
             </div>
           ))}

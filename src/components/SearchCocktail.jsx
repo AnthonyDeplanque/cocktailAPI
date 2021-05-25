@@ -42,7 +42,7 @@ export default function SearchCocktail() {
                     src={e.strDrinkThumb}
                     alt={e.idDrink}
                   />
-                  {e.strDrink}
+                  <div className="drinkthumb-name">{e.strDrink}</div>
                 </Link>
               </div>
             ))}

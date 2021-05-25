@@ -2,8 +2,12 @@
     width: 50px;
     border-radius: 25px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    margin: 10px;
 }
-
+.drinkthumb-name{
+    align-items: center;
+    padding : 5px;
+}
 .searched-cocktailList {
     display: flex;
     flex-direction: row;
