@@ -36,6 +36,10 @@ export default function Navbar() {
             <li className="element-color">Search a Cocktail
             </li>
           </Link>
+          <Link to="/FirstLetter">
+            <li className="element-color">Cocktail by first letter
+            </li>
+          </Link>
           <div className="navbar-logo">
             <img
               src="https://www.thecocktaildb.com/images/cocktail_right.png"

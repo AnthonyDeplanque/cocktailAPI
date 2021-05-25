@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import DisplayCocktail from './components/DisplayCocktail';
 import Navbar from './components/Navbar';
 import GetIngredientsCocktails from './components/GetIngredientsCocktails';
+import GetFirstLetterCocktails from './components/GetFirstLetterCocktails';
 
 function App() {
   const [agreement, setAgreement] = useState(false);
@@ -40,6 +41,9 @@ function App() {
               </Route>
               <Route path="/Cocktail/:idDrink">
                 <DisplayCocktail />
+              </Route>
+              <Route path="/FirstLetter/">
+                <GetFirstLetterCocktails />
               </Route>
             </Switch>
           </div>
