@@ -32,12 +32,12 @@ export default function Navbar() {
             <li className="element-color">Cocktail Ingredients
             </li>
           </Link>
-          <Link to="/SearchCocktail">
-            <li className="element-color">Search a Cocktail
-            </li>
-          </Link>
           <Link to="/FirstLetter">
             <li className="element-color">Cocktail by first letter
+            </li>
+          </Link>
+          <Link to="/SearchCocktail">
+            <li className="element-color">Search a Cocktail
             </li>
           </Link>
           <div className="navbar-logo">

@@ -33,7 +33,7 @@ const GetIngredientsCocktails = () => {
           ))}
         </select>
       </div>
-      <h1>{filters}</h1>
+      {filtered && <h1>found {filtered.length} cocktail{filtered.length > 1 ? 's' : null} for {filters}</h1>}
       {filtered && (
         <div className="flex-cocktail-list">
           {filtered.map((cocktail) => (
