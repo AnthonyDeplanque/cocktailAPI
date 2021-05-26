@@ -65,7 +65,12 @@ const GetFirstLetterCocktails = () => {
           ))}
         </select>
       </div>
-      <h1>{filters}</h1>
+      {filtered && (
+        <h1>Found {filtered.length} cocktail
+          {filtered.length > 1 ? 's ' : ' ' }
+          for {filters.toUpperCase()}
+        </h1>
+      )}
       {filtered && (
         <div className="flex-cocktail-list">
           {filtered.map((cocktail) => (

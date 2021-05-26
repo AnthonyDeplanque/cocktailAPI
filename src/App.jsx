@@ -57,6 +57,11 @@ function App() {
       <p>
         This application uses <a href="https://www.thecocktaildb.com/">the cocktail DB</a>, An open,
         crowd-sourced database of drinks and cocktails from around the world.
+        This is the test version of the database,
+        used for educational purpose.
+        It may have problems to fetch
+        informations on this database.
+        Don&apos;t mind, and retry later.
       </p>
       <p>by clicking on the &apos;I Agree&apos; button, you certify that you are
         of legal age and you will comply
