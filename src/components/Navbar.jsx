@@ -32,8 +32,8 @@ export default function Navbar() {
             <li className="element-color">Cocktail Ingredients
             </li>
           </Link>
-          <Link to="/FirstLetter">
-            <li className="element-color">Cocktail by first letter
+          <Link to="/FirstCharacter">
+            <li className="element-color">Cocktail by first character
             </li>
           </Link>
           <Link to="/SearchCocktail">
