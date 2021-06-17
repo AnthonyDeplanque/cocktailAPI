@@ -12,6 +12,7 @@
     width: 100%;
     padding-top: 1em;
     border-top : solid 0.5px black;
+    z-index:50;
 }
 
 .legal {
@@ -49,11 +50,16 @@
         height : 50px;
         width : auto;
     }
+    .footer{
+        box-sizing: border-box;
+        padding-left:10px;
+        padding-right:10px;
+    }
 }
 
 @media (max-width:700px) {
     .footer{
-        font-size: .4rem;
+        font-size: .5rem;
     }
     .icons img {
         width: 25px;
