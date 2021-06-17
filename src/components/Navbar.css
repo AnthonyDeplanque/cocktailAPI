@@ -1,6 +1,6 @@
 .navbar {
   position: sticky;
-  background: beige;
+  background: linear-gradient(45deg,rgb(246, 246, 221),rgb(250,159,66));
   width: 100%;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
 }
@@ -29,15 +29,21 @@
     padding-top: 15px;
     align-items: center;
     padding-bottom : 15px;
+
+  }
+  .navbar-list a{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
   .navbar-list li {
     align-self: center;
     margin-top: 5px;
     margin-bottom : 5px;
     padding : 5px;
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     text-align:center;
-    min-width : 80%;
   }
   .navbar-logo img {
     display: none;
@@ -48,6 +54,7 @@
   .navbar-list {
     flex-direction: row;
     align-content: flex-end;
+    align-items: center;
     padding: 15px;
     padding-left : 70px;
     padding-right : 35px;
@@ -58,21 +65,22 @@
   .navbar-list li {
     display: flex;
     font-size: 1rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     border-radius: 10% 10% 10% 10% / 20% 20% 20% 20%;
-    border : 3px ridge brown;
+    border : 1px ridge #BDF;
     margin: 5px;
     padding: 5px;
-    max-width : 125px;
+    width : 125px;
     min-height : 50px;
     align-items: center;
     text-align : center;
     align-self: center;
+
   }
   .navbar-logo img {
     height: 100px;
     border-radius: 50%;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+
   }
 }
 
@@ -83,5 +91,5 @@
 .navbar-logo img {
   height: 100px;
   border-radius: 50%;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+
 }
