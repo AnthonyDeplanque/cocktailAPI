@@ -19,7 +19,7 @@
     width: 300px;
     height: 100px;
     text-align: center;
-    background: linear-gradient(45deg,rgb(246, 246, 221),rgb(250,159,66));
+    background: linear-gradient(45deg,rgb(246, 246, 221),#bdf);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
     margin: 5px;
     padding: 10px;

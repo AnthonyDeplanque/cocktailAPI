@@ -21,19 +21,19 @@ export default function Navbar() {
       {showMenu && (
         <ul className="navbar-list">
           <Link to="/RandomCocktail">
-            <li className="cocktail-button">Random Cocktail
+            <li className="element-color">Random Cocktail
             </li>
           </Link>
           <Link to="/Filter/Category">
-            <li className="cocktail-button">Cocktail Categories
+            <li className="element-color">Cocktail Categories
             </li>
           </Link>
           <Link to="/Filter/Ingredient">
-            <li className="cocktail-button">Cocktail Ingredients
+            <li className="element-color">Cocktail Ingredients
             </li>
           </Link>
           <Link to="/FirstLetter">
-            <li className="cocktail-button">Cocktail by first letter
+            <li className="element-color">Cocktail by first letter
             </li>
           </Link>
           <Link to="/SearchCocktail">
