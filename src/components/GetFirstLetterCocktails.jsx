@@ -52,7 +52,7 @@ const GetFirstLetterCocktails = () => {
   return (
     <div>
       <div className="filtering-block">
-        <p>Select a first letter :</p>
+        <p>Select a first character :</p>
         <select
           className="filtered-items element-color"
           onChange={(e) => {

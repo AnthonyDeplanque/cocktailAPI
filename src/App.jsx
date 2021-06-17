@@ -42,7 +42,7 @@ function App() {
               <Route path="/Cocktail/:idDrink">
                 <DisplayCocktail />
               </Route>
-              <Route path="/FirstLetter/">
+              <Route path="/FirstCharacter/">
                 <GetFirstLetterCocktails />
               </Route>
             </Switch>

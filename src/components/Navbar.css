@@ -24,7 +24,7 @@
 @media (max-width:700px) {
   .flex-title{
     justify-content: flex-end;
-    padding-right: 5px;
+    padding-right: 10px;
   }
   .navbar-list {
     flex-direction: column;
