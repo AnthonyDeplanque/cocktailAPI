@@ -1,5 +1,5 @@
 .footer {
-    background: beige;
+    background: linear-gradient(315deg,rgb(246, 246, 221),#bdf);
     font-size: .8rem;
     position: fixed;
     display: flex;
@@ -11,6 +11,7 @@
     bottom: 0;
     width: 100%;
     padding-top: 1em;
+    border-top : solid 0.5px black;
 }
 
 .legal {
