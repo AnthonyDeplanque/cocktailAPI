@@ -15,7 +15,7 @@ const GetCocktailsList = () => {
     <div>
       <div className="filtering-block">
         <button
-          className="cocktail-button"
+          className="cocktail-button thick"
           type="submit"
           onClick={() => fetchCocktail(cocktailRandom, setCocktail)}
         >
