@@ -32,12 +32,12 @@ export default function Navbar() {
             <li className="cocktail-button">Cocktail Ingredients
             </li>
           </Link>
-          <Link to="/SearchCocktail">
-            <li className="cocktail-button">Search a Cocktail
-            </li>
-          </Link>
           <Link to="/FirstLetter">
             <li className="cocktail-button">Cocktail by first letter
+            </li>
+          </Link>
+          <Link to="/SearchCocktail">
+            <li className="element-color">Search a Cocktail
             </li>
           </Link>
           <div className="navbar-logo">
