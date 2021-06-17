@@ -2,7 +2,7 @@
   position: absolute;
   height: 70px;
   width: 70px;
-  background: beige;
+
   left: 0;
   top: 0;
   border-radius: 10% 10% 10% 10%/ 10% 10% 10% 10%;
@@ -44,6 +44,6 @@
 }
 
 .burger-menu-open {
-  box-shadow: 5px 0 5px rgba(0, 0, 0, 70%);
-  background: rgb(199, 199, 158);
+  background-color:rgba(0,0,0,0.1);
+
 }
