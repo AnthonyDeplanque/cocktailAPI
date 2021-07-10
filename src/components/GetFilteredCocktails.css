@@ -19,9 +19,11 @@
     width: 300px;
     height: 100px;
     text-align: center;
-    background: linear-gradient(45deg,rgb(246, 246, 221),#bdf);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-    margin: 5px;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background: linear-gradient(45deg,rgba(246, 246, 221, .5),rgba(185, 220, 255, .5));
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); 
+      margin: 5px;
     padding: 10px;
     border-radius: 15px;
 }
