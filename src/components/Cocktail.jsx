@@ -46,6 +46,11 @@ export default function Cocktail({ ...props }) {
       <div className="cardDrink">
         {strDrink ? (
           <div className="inner-cardDrink">
+            <img
+              className="cocktail-image"
+              src={strDrinkThumb}
+              alt={idDrink}
+            />
             <h1>{strDrink}</h1>
             {strDrinkAlternate && (
               <p>
@@ -55,11 +60,6 @@ export default function Cocktail({ ...props }) {
             <div className="cocktail-elements">
               <div className="cocktail-intro">
                 <h3>{strAlcoholic}</h3>
-                <img
-                  className="cocktail-image"
-                  src={strDrinkThumb}
-                  alt={idDrink}
-                />
                 <p>
                   serve in a <strong>{strGlass}</strong>
                 </p>
