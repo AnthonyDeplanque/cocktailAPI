@@ -13,7 +13,7 @@
   border-radius: 5px;
   align-items: center;
   align-self: center;
-  border-radius: 25px;
+  border-radius: 223px 42px 147px 62px / 59px 34px 64px 35px;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   background: linear-gradient(45deg,rgba(246, 246, 221, .5),rgba(185, 220, 255, .5));
